@@ -5,14 +5,14 @@ from telethon.tl.functions.channels import InviteToChannelRequest
 from telethon.tl.types import InputUser
 
 #Id do grupo de destino (não utilizado no codigo)
-grupodestinoId = 2773408683
+grupodestinoId = 1234567
 
-nome_canal = 'screamcorpvazados' #nome do grupo onde os membros serão adicionados
+nome_canal = '' #nome do grupo onde os membros serão adicionados
 
 #informações APP telegram
-app_id = 20074820
-api_hash ='7455c8a34a8033b9bf9f4018206a8e43'
-numero_Telegram = '+5565992500472'
+app_id = 12345
+api_hash =''
+numero_Telegram = '+55'
 
 #função principal para adicionar membros de forma automatizada
 async def adicionar_Membros():
@@ -24,7 +24,7 @@ async def adicionar_Membros():
     #segunda tentativa caso a primeira n conecte
     if not await client.is_user_authorized():
         await client.send_code_request(numero_Telegram)
-        codigo = input('ja sabe man fala o codigo')
+        codigo = input('Digite o codigo enviado para seu telegram')
         await client.sign_in(codigo)
 
     caminhoLista = './listaMembros.json'
