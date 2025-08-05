@@ -18,7 +18,7 @@ numero_Telegram = '+55'
 async def adicionar_Membros():
 
     #passa os dados para conectar ao cliente e tenta conexão
-    client = TelegramClient('session2', app_id, api_hash)
+    client = TelegramClient('session', app_id, api_hash)
     await client.start(numero_Telegram) # type: ignore
 
     #segunda tentativa caso a primeira n conecte
