@@ -1,8 +1,7 @@
 from telethon import TelegramClient, utils
-#from telethon.tl.functions.channels import GetParticipantsRequest
-#from telethon.tl.functions.channels import GetFullChannelRequest
+
 from telethon.tl.types import ChannelParticipantsSearch
-#from telethon.tl.functions.messages import GetDialogsRequest
+
 
 #import time
 import asyncio
@@ -10,11 +9,11 @@ import asyncio
 import json
 #informações da aplicação telegram
 app_id = 20074820
-api_hash ='7455c8a34a8033b9bf9f4018206a8e43'
-numeroTelegram = '+5565992500472'
+api_hash =''
+numeroTelegram = '+55'
 
 #nome do canal a ser extraido
-nomedocanal = 'screamcorporation'
+nomedocanal = ''
 
 #Função principal para extração de membros
 async def extrairmembros():
